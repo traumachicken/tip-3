@@ -17,14 +17,14 @@
       <value>'2011/05/09'</value>
     </define>
     <source-path append="true">
-      <path-element>C:\Flixel\Projects\Tip 3\src</path-element>
+      <path-element>C:\Flixel\Projects\tip-3\src</path-element>
       <path-element>C:\Flixel\flixel</path-element>
       <path-element>C:\Flixel\Flixel Power Tools Libs v2.5</path-element>
       <path-element>C:\Users\Public\Tools\FlashDevelop\Library\AS3\classes</path-element>
     </source-path>
   </compiler>
   <file-specs>
-    <path-element>C:\Flixel\Projects\Tip 3\src\Main.as</path-element>
+    <path-element>C:\Flixel\Projects\tip-3\src\Main.as</path-element>
   </file-specs>
   <default-background-color>#000000</default-background-color>
   <default-frame-rate>60</default-frame-rate>

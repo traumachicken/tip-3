@@ -11,7 +11,9 @@ package
 	public class WeaponManager extends FlxGroup
 	{
 		[Embed(source='../assets/50AE_Fire1.mp3')] protected var SndHandCannon:Class;
-		[Embed(source='../assets/9mm_Single_Reload_000.mp3')] protected var SndReload:Class;
+		[Embed(source = '../assets/9mm_Single_Reload_000.mp3')] protected var SndStartReload:Class;
+		[Embed(source = '../assets/9mm_Single_Reload_049.mp3')] protected var SndEndReload:Class;
+		[Embed(source = '../assets/9mm_DryFire.mp3')] protected var SndDryFire:Class;
 		
 		public var currType:uint = 0;
 		public var newType:uint;
@@ -32,7 +34,7 @@ package
 		
 		public function WeaponManager() 
 		{
-			bulletDelay = 475; // HANDGUN
+			bulletDelay = 175; // HANDGUN
 			ammo = 12;
 			clips = 7;
 			clipSize = 12;
@@ -53,6 +55,7 @@ package
 					clips --;
 					ammo = clipSize;
 					isReloading = false;
+					FlxG.play(SndEndReload, 0.6);
 				}
 			}
 			
@@ -80,7 +83,7 @@ package
 			// 既にリロード中
 			if ( isReloading )	return;
 			
-			FlxG.play(SndReload, 0.6);
+			FlxG.play(SndStartReload, 0.6);
 			isReloading = true;
 			startReload = getTimer();
 			
